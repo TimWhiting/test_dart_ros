@@ -1,0 +1,14 @@
+name: test_dart
+
+dependencies:
+  buffer: any
+  hex: any
+  dartros:
+    # path: ../../../dartros/
+    git:
+      url: https://github.com/TimWhiting/dartros
+  std_msgs:
+    path: ../../devel/share/gendart/ros/std_msgs
+
+dev_dependencies:
+  build_runner: any
