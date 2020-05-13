@@ -4,7 +4,7 @@ dependencies:
   buffer: any
   hex: any
   dartros:
-    # path: ../../../dartros/
+    # path: ../dartros/
     git:
       url: https://github.com/TimWhiting/dartros
   std_msgs:
