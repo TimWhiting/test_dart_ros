@@ -6,8 +6,8 @@ import 'package:dartros/dartros.dart';
 import 'package:std_msgs/msgs.dart';
 import 'package:dartros/src/utils/tcpros_utils.dart';
 
-void main(List<String> args) {
-  final node = Node('test_node');
+void main(List<String> args) async {
+  final node = await initNode('test_node', args);
   final str_msg = StringMessage(data: 'hello');
 
   final writer = ByteDataWriter(endian: Endian.little);
@@ -17,8 +17,8 @@ void main(List<String> args) {
   print(HEX.encode(writer.toBytes().toList()));
   final reader = ByteDataReader(endian: Endian.little);
   reader.add(writer.toBytes());
-  final header = parseTcpRosHeader(reader);
-  print(header);
-  final message = deserializeMessage<StringMessage>(reader);
-  print(message.data);
+  // final header = parseTcpRosHeader(reader);
+  // print(header);
+  // final message = deserializeMessage<StringMessage>(reader);
+  // print(message.data);
 }
