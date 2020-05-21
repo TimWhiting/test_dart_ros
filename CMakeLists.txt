@@ -10,6 +10,7 @@ project(test_dart)
 find_package(catkin REQUIRED COMPONENTS
   common_msgs
   std_msgs
+  rosgraph_msgs
 )
 
 ## System dependencies are found with CMake's conventions
