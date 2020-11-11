@@ -10,7 +10,11 @@ project(test_dart)
 find_package(catkin REQUIRED COMPONENTS
   common_msgs
   std_msgs
+  geometry_msgs
   rosgraph_msgs
+  sensor_msgs
+  actionlib_msgs
+  roscpp
 )
 
 ## System dependencies are found with CMake's conventions
@@ -47,11 +51,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  Message1.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -68,10 +71,17 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   common_msgs#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  common_msgs
+  std_msgs
+  geometry_msgs
+  rosgraph_msgs
+  sensor_msgs
+  actionlib_msgs
+  roscpp
+
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -121,14 +131,11 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/test_dart.cpp
-# )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(${PROJECT_NAME} common_msgs_generate_messages_dart rosgraph_msgs_generate_messages_dart actionlib_msgs_generate_messages_dart sensor_msgs_generate_messages_dart)
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
