@@ -8,7 +8,6 @@ project(test_dart)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  common_msgs
   std_msgs
   geometry_msgs
   rosgraph_msgs
@@ -73,7 +72,6 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  common_msgs
   std_msgs
   geometry_msgs
   rosgraph_msgs
