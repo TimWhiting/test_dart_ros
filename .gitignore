@@ -22,3 +22,9 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# Editor files
+*~
+*.swp
+*.swo
+.idea/

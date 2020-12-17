@@ -1,0 +1,9 @@
+#goal definition
+CoffeeSpec spec
+---
+#result definition
+float32 mass
+duration duration
+---
+#feedback
+float32 mass
