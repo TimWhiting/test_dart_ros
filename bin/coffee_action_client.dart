@@ -5,14 +5,7 @@ import '../lib/msgs.dart';
 Future<void> main(List<String> args) async {
   final nh = await initNode('coffee_client', args, anonymize: true);
 
-  final ac = SimpleActionClient<
-      CoffeeGoal,
-      CoffeeActionGoal,
-      CoffeeFeedback,
-      CoffeeActionFeedback,
-      CoffeeResult,
-      CoffeeActionResult,
-      CoffeeAction>('/coffee', nh, CoffeeAction.$prototype);
+  final ac = SimpleActionClient('/coffee', nh, CoffeeAction.$prototype);
 
   print('Waiting for action server...');
   final ready = await ac.waitForServer(10000);

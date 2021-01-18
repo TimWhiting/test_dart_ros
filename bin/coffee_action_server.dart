@@ -4,14 +4,8 @@ import 'package:dartros/dartros.dart';
 import '../lib/msgs.dart';
 
 class CoffeeServer {
-  SimpleActionServer<
-      CoffeeGoal,
-      CoffeeActionGoal,
-      CoffeeFeedback,
-      CoffeeActionFeedback,
-      CoffeeResult,
-      CoffeeActionResult,
-      CoffeeAction> _server;
+  SimpleActionServer<CoffeeGoal, CoffeeActionGoal, CoffeeFeedback,
+      CoffeeActionFeedback, CoffeeResult, CoffeeActionResult> _server;
 
   CoffeeServer(NodeHandle nh) {
     _server = SimpleActionServer(
