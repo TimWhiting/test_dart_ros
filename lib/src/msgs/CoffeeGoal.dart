@@ -1,13 +1,14 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 15:41:12 2020
+// Updated: Mon Feb  1 12:03:04 2021
 
 // (in-package test_dart.msg)
 
 
+// ignore_for_file: unused_import, overridden_fields
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 import 'CoffeeSpec.dart';
 
 //-----------------------------------------------------------
@@ -17,12 +18,13 @@ class CoffeeGoal extends RosMessage<CoffeeGoal> {
 
   static CoffeeGoal $prototype = CoffeeGoal();
   CoffeeGoal({ 
-    CoffeeSpec spec,
+    CoffeeSpec? spec,
   }):
   this.spec = spec ?? CoffeeSpec();
 
+  @override
   CoffeeGoal call({ 
-    CoffeeSpec spec,
+    CoffeeSpec? spec,
   }) => CoffeeGoal(
   spec: spec,
   );

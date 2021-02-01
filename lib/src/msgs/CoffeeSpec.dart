@@ -1,13 +1,14 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 15:41:05 2020
+// Updated: Mon Feb  1 12:03:00 2021
 
 // (in-package test_dart.msg)
 
 
+// ignore_for_file: unused_import, overridden_fields
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 
 //-----------------------------------------------------------
 
@@ -20,18 +21,19 @@ class CoffeeSpec extends RosMessage<CoffeeSpec> {
 
   static CoffeeSpec $prototype = CoffeeSpec();
   CoffeeSpec({ 
-    String name,
-    double grind_size,
-    double mass,
+    String? name,
+    double? grind_size,
+    double? mass,
   }):
   this.name = name ?? '',
   this.grind_size = grind_size ?? 0.0,
   this.mass = mass ?? 0.0;
 
+  @override
   CoffeeSpec call({ 
-    String name,
-    double grind_size,
-    double mass,
+    String? name,
+    double? grind_size,
+    double? mass,
   }) => CoffeeSpec(
   name: name,
   grind_size: grind_size,

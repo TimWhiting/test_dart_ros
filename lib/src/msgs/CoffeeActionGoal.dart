@@ -1,16 +1,14 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 15:41:06 2020
+// Updated: Mon Feb  1 12:03:04 2021
 
 // (in-package test_dart.msg)
 
 
-import 'CoffeeGoal.dart';
-import 'CoffeeFeedback.dart';
-import 'CoffeeResult.dart';
+// ignore_for_file: unused_import, overridden_fields
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 import 'package:actionlib_msgs/msgs.dart';
 import 'package:std_msgs/msgs.dart';
 import 'CoffeeGoal.dart';
@@ -29,18 +27,19 @@ class CoffeeActionGoal extends RosActionGoal<CoffeeGoal, CoffeeActionGoal> {
 
   static CoffeeActionGoal $prototype = CoffeeActionGoal();
   CoffeeActionGoal({ 
-    Header header,
-    GoalID goal_id,
-    CoffeeGoal goal,
+    Header? header,
+    GoalID? goal_id,
+    CoffeeGoal? goal,
   }):
   this.header = header ?? Header(),
   this.goal_id = goal_id ?? GoalID(),
   this.goal = goal ?? CoffeeGoal();
 
+  @override
   CoffeeActionGoal call({ 
-    Header header,
-    GoalID goal_id,
-    CoffeeGoal goal,
+    Header? header,
+    GoalID? goal_id,
+    CoffeeGoal? goal,
   }) => CoffeeActionGoal(
   header: header,
   goal_id: goal_id,

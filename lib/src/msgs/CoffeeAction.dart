@@ -1,16 +1,17 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 17:10:23 2020
+// Updated: Mon Feb  1 12:03:00 2021
 
 // (in-package test_dart.msg)
 
 
+// ignore_for_file: unused_import, overridden_fields
 import 'CoffeeGoal.dart';
 import 'CoffeeFeedback.dart';
 import 'CoffeeResult.dart';
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 import 'CoffeeActionGoal.dart';
 import 'CoffeeActionResult.dart';
 import 'CoffeeActionFeedback.dart';
@@ -26,18 +27,19 @@ class CoffeeAction extends RosActionMessage<CoffeeGoal, CoffeeActionGoal, Coffee
 
   static CoffeeAction $prototype = CoffeeAction();
   CoffeeAction({ 
-    CoffeeActionGoal action_goal,
-    CoffeeActionResult action_result,
-    CoffeeActionFeedback action_feedback,
+    CoffeeActionGoal? action_goal,
+    CoffeeActionResult? action_result,
+    CoffeeActionFeedback? action_feedback,
   }):
   this.action_goal = action_goal ?? CoffeeActionGoal(),
   this.action_result = action_result ?? CoffeeActionResult(),
   this.action_feedback = action_feedback ?? CoffeeActionFeedback();
 
+  @override
   CoffeeAction call({ 
-    CoffeeActionGoal action_goal,
-    CoffeeActionResult action_result,
-    CoffeeActionFeedback action_feedback,
+    CoffeeActionGoal? action_goal,
+    CoffeeActionResult? action_result,
+    CoffeeActionFeedback? action_feedback,
   }) => CoffeeAction(
   action_goal: action_goal,
   action_result: action_result,

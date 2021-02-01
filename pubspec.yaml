@@ -1,13 +1,13 @@
 name: test_dart
 
 environment:
-  sdk: '>=2.6.0 <3.0.0'
+  sdk: '>=2.12.0-0 <3.0.0'
 
 dependencies:
   buffer: any
   hex: any
   dartros: any
-  std_msgs: ^0.0.3
+  std_msgs: ^0.1.0-nullsafety.0
 
 dependency_overrides:
   dartros:

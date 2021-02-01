@@ -1,13 +1,14 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 15:41:12 2020
+// Updated: Mon Feb  1 12:03:02 2021
 
 // (in-package test_dart.msg)
 
 
+// ignore_for_file: unused_import, overridden_fields
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 
 //-----------------------------------------------------------
 
@@ -18,15 +19,16 @@ class CoffeeResult extends RosMessage<CoffeeResult> {
 
   static CoffeeResult $prototype = CoffeeResult();
   CoffeeResult({ 
-    double mass,
-    RosTime duration,
+    double? mass,
+    RosTime? duration,
   }):
   this.mass = mass ?? 0.0,
   this.duration = duration ?? RosTime(secs: 0, nsecs: 0);
 
+  @override
   CoffeeResult call({ 
-    double mass,
-    RosTime duration,
+    double? mass,
+    RosTime? duration,
   }) => CoffeeResult(
   mass: mass,
   duration: duration,

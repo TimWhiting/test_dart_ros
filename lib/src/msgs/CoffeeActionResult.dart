@@ -1,18 +1,16 @@
 // Auto-generated. Do not edit!
 
-// Updated: Thu Dec 17 15:41:08 2020
+// Updated: Mon Feb  1 12:03:04 2021
 
 // (in-package test_dart.msg)
 
 
-import 'CoffeeGoal.dart';
-import 'CoffeeFeedback.dart';
-import 'CoffeeResult.dart';
+// ignore_for_file: unused_import, overridden_fields
 import 'dart:convert';
 import 'package:buffer/buffer.dart';
-import 'package:dartros/msg_utils.dart';
-import 'package:std_msgs/msgs.dart';
+import 'package:dartros_msgutils/msg_utils.dart';
 import 'package:actionlib_msgs/msgs.dart';
+import 'package:std_msgs/msgs.dart';
 import 'CoffeeResult.dart';
 
 //-----------------------------------------------------------
@@ -29,18 +27,19 @@ class CoffeeActionResult extends RosActionResult<CoffeeResult, CoffeeActionResul
 
   static CoffeeActionResult $prototype = CoffeeActionResult();
   CoffeeActionResult({ 
-    Header header,
-    GoalStatus status,
-    CoffeeResult result,
+    Header? header,
+    GoalStatus? status,
+    CoffeeResult? result,
   }):
   this.header = header ?? Header(),
   this.status = status ?? GoalStatus(),
   this.result = result ?? CoffeeResult();
 
+  @override
   CoffeeActionResult call({ 
-    Header header,
-    GoalStatus status,
-    CoffeeResult result,
+    Header? header,
+    GoalStatus? status,
+    CoffeeResult? result,
   }) => CoffeeActionResult(
   header: header,
   status: status,

@@ -4,7 +4,7 @@ import 'package:dartros/dartros.dart';
 import '../lib/msgs.dart';
 
 class CoffeeServer {
-  SimpleActionServer<CoffeeGoal, CoffeeActionGoal, CoffeeFeedback,
+  late final SimpleActionServer<CoffeeGoal, CoffeeActionGoal, CoffeeFeedback,
       CoffeeActionFeedback, CoffeeResult, CoffeeActionResult> _server;
 
   CoffeeServer(NodeHandle nh) {
@@ -16,7 +16,10 @@ class CoffeeServer {
     );
   }
 
-  Future<void> execute(CoffeeGoal goal) async {
+  Future<void> execute(CoffeeGoal? goal) async {
+    if (goal == null) {
+      return;
+    }
     final spec = goal.spec;
     print('Goal: ${spec.mass} g of ${spec.name} ground at ${spec.grind_size}');
     final stepDuration = 1.seconds;
