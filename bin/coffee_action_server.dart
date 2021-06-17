@@ -1,5 +1,5 @@
-import 'package:dartx/dartx.dart';
 import 'package:dartros/dartros.dart';
+import 'package:dartx/dartx.dart';
 
 import '../lib/msgs.dart';
 
@@ -55,11 +55,12 @@ Future<void> main(List<String> args) async {
   final server = CoffeeServer(nh);
 
   server.start();
-
-  for (;;) {
-    await Future.delayed(1.seconds);
+  try {
+    for (;;) {
+      await Future.delayed(1.seconds);
+    }
+  } finally {
+    await server.shutdown();
+    await nh.node.shutdown();
   }
-
-  await server.shutdown();
-  await nh.node.shutdown();
 }

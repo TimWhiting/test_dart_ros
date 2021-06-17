@@ -7,7 +7,7 @@ import 'package:std_msgs/msgs.dart';
 import 'package:dartros/src/utils/tcpros_utils.dart';
 
 void main(List<String> args) async {
-  final node = await initNode('test_node', args);
+  final _ = await initNode('test_node', args);
   final str_msg = StringMessage(data: 'hello');
 
   final writer = ByteDataWriter(endian: Endian.little);

@@ -26,7 +26,7 @@ Future<void> main(List<String> args) async {
   print('Goal done: $goalDone');
 
   final result = ac.getResult();
-  print('Result: brewed ${result?.mass} g in ${result?.duration?.secs} s');
+  print('Result: brewed ${result?.mass} g in ${result?.duration.secs} s');
 
   await ac.shutdown();
   await nh.node.shutdown();
